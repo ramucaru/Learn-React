@@ -1,0 +1,105 @@
+React Course:
+
+   REACT AND REACTDOM:
+   
+       React.createElement will create Element as Object.
+	   ReactDom will render into browser.
+	   eg:-
+	     index.html
+		 ----------
+		      <div id="root"></div>
+			  
+		  index.js
+		  ---------
+		   // first will get root element for where we need to display
+		   const root = ReactDom.createRoot(document.getElementbyId("root");
+	       //now it will create react element as Object
+		   const element = React.CreateElement("div",{id:"rootElemnt"},"Enter the data"); 
+		   //now render above element to show in browser 
+		   Note: React.createElement will create element as Object to show that in browser we need to render that element by using ReactDom
+		   root.render(element);
+----------------------------------------------------------------------------------------------------------------------------------------------
+   REACT USES LOT OF OTHER PACKAGES TO MAKE OUR APP TO VERY FASTER
+----------------------------------------------------------------------------------------------------------------------------------------------
+  
+      way to get React into our App:
+       1.CDN links ( it is not preferred way to way)
+       2.via NPM
+----------------------------------------------------------------------------------------------------------------------- 
+   Budler : it will combine all the js code along with assets and css into file file or package to serve browser.
+   
+  -----------------------------------------  
+  devdependency      |   dependency       |
+  -------------      |   ----------       |
+   for development   |  developmnt        |
+                     |                    |
+					 |					  |
+					 |					  |
+					 |                    |
+ ------------------------------------------
+   
+   
+-----------------------------------------------------------------------------------------------------------------------------------------------
+   
+   NPM: it is package manager. which will give access for installing
+   
+   
+   PACKAGE.JSON 
+         is configuration of the package installed;
+		 
+   PACKAGE.LOCK JSON :
+         kind of database for installed package. it keeps logs and record of exact version been installed from npm.
+		 
+   NODEMODULE:
+	    conatin all the code of which are installed 
+		                          -------------------------------------------------------
+		^(carrot) - it means if uograded any minor change of the purticular package version it will get changed automatically
+		~(tilda) - it means if uograded any major change of the purticular package version it will get changed automatically 
+		
+		Note: if we don't have nodemodule and we have package.json and package.lock.json we can recreate all the nodemodule
+		
+		
+		transitive dependency:
+		           one package has dependent on other package. that package dependent on other package;
+				   
+----------------------------------------------------------------------------------------------------------------------------------------------
+
+   NPX : executing the package;		
+
+----------------------------------------------------------------------------------------------------------------------------
+
+  PARCEL   :   
+      dev Build,
+	  local server
+	  HMR - hot mudule replacement
+	  file watching algorithm - written in c++
+	  caching - faster build
+	  image optimization
+	  minification of file if production
+	  bundle
+	  compress - Automatic production optimization
+	  consistant hashing - read from google
+	  code spliting 
+	  differncial bundling - support old browser and different different browser
+	  diagnositic - if you make any error on your code parcel will show beatufull
+	  error handling
+	  allow to host https in locally
+	  treechacking - remove unused code for you.
+	  lightning fast - once builded code will cached so never your code will rebuild again.
+	  
+	 --------------------------------------------------------------------------------------------------------------------
+	 
+	 BrowserList : to make accept older version of browsers. here we could tell which version of brwser should accept this code.
+	 
+	 --------------------------------------------------------------------------------------------------------------------------------------------
+	 
+															JSX
+														    ----
+															
+	  JSX not HTML in JS. it is HTML like Syntaxn  
+	  
+	  Whenever your writing JSX it the it will tanrsfiled(convert to core) Js before it reaches jsEngine - it is done by parcel babel
+	  
+	  BABEL: it will convert JSX code to core JS 
+	  -----
+	       eg : It will convert to React.CreateElement behind the schene babel is doing

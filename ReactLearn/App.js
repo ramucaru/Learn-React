@@ -1,3 +1,6 @@
+import React from "react"
+import ReactDOM from "react-dom";
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 const title = React.createElement("h1", { id: "heading" }, "it is not ending it is starting here");
 root.render(title)
