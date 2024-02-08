@@ -103,3 +103,88 @@ React Course:
 	  BABEL: it will convert JSX code to core JS 
 	  -----
 	       eg : It will convert to React.CreateElement behind the schene babel is doing
+		   
+		   
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+   keys:
+      React whenever
+	  
+	  
+	  ----------------------------------------------------------------------------------------------------------------------------
+	  
+	  DOM manupulation
+	  
+	  virtual DOM
+	  deep algorithm
+	  reconcilation
+	  
+	  
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+                  HOOKS: Hooks is normal JS fucntion which has some super power 
+				  
+				  1. useState : 
+				         for state variable. 
+						   const [state, setState] = useState();
+						   whenever state variable updates react re-render our application
+						   
+						  
+		-----------------------------------------------------------------------------------------------------------------------
+		                              Reconciliation algorith or React fiber (react 16 onwards)        
+		 VIRTUAL DOM: representation of actual DOM
+		 
+		 DEEP ALGORITHM: 
+		           deep alogorith finds out difference b/w two virtual DOM. (which means try to find difference between
+		 updated virtaul DOM and old virtual Dom. ) . it will calculate the difference then it will update actual DOM
+		 
+		 
+		 beacuse it has virtual DOM and it has deep algorithm so it could efficiant DOM manupulation.
+		 
+		 ---------------------------------------------------------------------------------------------------------------------------------
+		 monolith
+		 
+		 whenever usestate changes it rerender entire component once again which means call reconcilation process
+		 
+		 useEffect :
+		          1.if don't have dependency arugument then useEffect callback will called each render.
+				  2. if have empty dependency it willed on only initial Render.
+				  3. if you give any variable inside dependency array it will called when value changes in purticular time
+				  
+		-----------------------------------------------------------------------------------------------------------------------------------
+		    ROUTES:
+				  here we are using npm packages : react-router-dom
+				  
+				  integrate configuration : 
+				    
+				  1. createBrowserRouter from react-router-dom
+				      craeteBrowserRouter will create web path each path need some path,
+					  const router = craeteBrowserRouter([
+					   {
+					     path:"/newname"
+						 element:<RenderComponent />
+					   },
+					   {
+					     path:"/secondPath"
+						 element:<AnotherComponent />
+					   },
+					   ])
+					   
+				2. i need to provide configuration to render above
+				   for RouterProvider 
+				     ReactDOm.render(<RouterProvider router={router}/>
+					 
+				3. react-router-dom will give importent hooks.
+				  useRouteError it will give proper error if an error occur;
+				  
+				4. Link component - 
+				    it is navigatating one place to another place rather than using anchor tag will use Link tag
+					a: if we use anchor tag it reloads page once again.
+					Link: it does not reload page it just refress the page.
+					      
+				5. two types of routing happening in web appliaction
+			         server side: 1. it will fetch once again like anchor tag. it loads again eg:. anchorTag
+					 
+ 					 client side: once pages rendered first time it has record so that it don't need to call again to server side 
+		 
+		 
